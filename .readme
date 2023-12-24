@@ -1,0 +1,20 @@
+Use java 17, apache Maven, and spring boot 3
+
+1. Run below scripts to create a new schema in mysql database
+-- create schema esb;
+-- use esb;
+
+2. Use any IDE to open the source code
+
+3. Go to Maven tab on the right panel and click "Reload All Maven Projects" to download the required jars in the .m2 folder
+
+4. Once the source code is open, go to application.properties
+-- change the value of "spring.jpa.hibernate.ddl-auto" to "create"
+example: spring.jpa.hibernate.ddl-auto=create
+
+5. Choose "InvoiceAppApplication.java" file and run it. After successfully running it, four tables will be auto-generated: customer, invoice, invoice_item, and item.
+
+6. -- change back the value of "spring.jpa.hibernate.ddl-auto" to "update"
+example: spring.jpa.hibernate.ddl-auto=update
+
+7. The app will run on port 8082 and we are ready to use postman to test the app.
